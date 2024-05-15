@@ -18,8 +18,6 @@ def percorrerMatriz(tartaruga, matriz, cores, tamanhoDoPixel):
         tartaruga.forward(tamanhoDoPixel)
         tartaruga.left(90)
 
-    tartaruga.done()
-
 def configurarDesenho(tartaruga, coordenadaX, coordenadaY):
     tartaruga.penup()
     tartaruga.speed(0)
@@ -46,17 +44,16 @@ def main():
 
     escolha = input("Insira o teste desejado (1 ou 2): ")
 
-    while(True):
-        match escolha:
-            case "1":
-                cores, matriz = teste1()
-            case "2":
-                cores, matriz = teste2()
-            case _:
-                print("Insira um caso de teste válido!")
+    match escolha:
+        case "1":
+            cores, matriz = teste1()
+        case "2":
+            cores, matriz = teste2()
+        case _:
+            print("Insira um caso de teste válido!")
 
-        tartaruga = configurarDesenho(turtle.Turtle(), coordenadaX, coordenadaY)
-        percorrerMatriz(tartaruga, matriz, cores, tamanhoDoPixel)
-
+    tartaruga = configurarDesenho(turtle.Turtle(), coordenadaX, coordenadaY)
+    percorrerMatriz(tartaruga, matriz, cores, tamanhoDoPixel)
+    turtle.done()
 
 main()
