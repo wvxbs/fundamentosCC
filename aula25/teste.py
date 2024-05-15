@@ -1,13 +1,9 @@
 import turtle
 
-# Criando a tela e o objeto Turtle
-tela = turtle.Screen()
-tartaruga = turtle.Turtle()
+t = turtle.Turtle()
 
-# Desenhando o quadrado
-for _ in range(4):
-    tartaruga.forward(100)  # Avança 100 unidades
-    tartaruga.right(90)     # Vira 90 graus para a direita
+for i in range(4):
+    t.forward(100)
+    t.right(90)
 
-# Finalizando
-tela.mainloop()
+turtle.done()
